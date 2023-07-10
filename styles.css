@@ -1,0 +1,55 @@
+body {
+    padding: 0; 
+    margin: 0;
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100vh;
+justify-content: space-between;
+align-items: center;
+color: #fff;
+
+font-family: "Exo", sans-serif;
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+/* background: linear-gradient(-45deg, #0653c5, #e2e913, #0da8e1, #23d5ab);
+ */
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+header {
+    color: rgb(255, 255, 255);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-weight: 300;
+}
+
+.bottom-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
