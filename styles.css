@@ -8,8 +8,7 @@ height: 100vh;
 justify-content: space-between;
 align-items: center;
 color: #fff;
-
-font-family: "Exo", sans-serif;
+font-family: helvetica, sans-serif;
 background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradientBG 15s ease infinite;
@@ -41,12 +40,17 @@ svg {
 header {
     color: rgb(255, 255, 255);
     height: 150px;
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 h1{
+    letter-spacing: 0.9em;
+    text-transform: uppercase;
     font-weight: 300;
+    text-align: center;
 }
 
 .bottom-section{
@@ -55,3 +59,109 @@ h1{
     justify-content: center;
     height: 150px;
 }
+
+
+.input-container{
+display: flex;
+align-items: center;
+width: 100%;
+max-width: 600px;
+
+}
+
+input{
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: rgb(38,57,77) 0 20px 30px -10px;
+    /* Stop spilling of the input container to the parent container with box sizing */
+    box-sizing: border-box;
+}
+
+#submit-icon{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    margin-left:10px;
+    
+}
+
+#search-input::placeholder {
+    font-family: helvetica, sans-serif;
+}
+  
+
+ button{
+   
+    padding: 15px 40px;
+    background: blue;
+    border:0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: helvetica;
+    font-size: 12px;
+    letter-spacing: 3px;
+    position: relative;
+    transition:         all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    display: block;
+    margin: 100px auto;
+    margin-left: 0.6em;
+    border-radius: 2px;
+  }
+  
+  button::after,
+  button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+      opacity: 0;
+    transition:         all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  button::after{
+      width: 30px;
+      height: 1px;
+      background: white;
+      transform: translateX(-3px);
+      margin-top: 0px;
+  }
+  
+  button::before{
+      content: "";
+      transform: rotate(-135deg) translateX(50%);
+      width: 11px;
+      height: 11px;
+      background: transparent;
+      border-left: 1px solid white;
+      border-bottom: 1px solid white;
+    margin-top: -1px;
+  }
+  
+  
+  button:hover{
+    padding: 15px 60px 15px 20px;
+  }
+  
+  button:hover::after,
+  button:hover::before{
+    opacity: 1;
+    right: 15px;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
