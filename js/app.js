@@ -1,5 +1,5 @@
 // var API_KEY = "your api key";
-import { API_KEY } from "./config.js";
+import { API_KEY } from "./config";
 
 const submitBtn = document.querySelector(".submit-button");
 const inputBox = document.querySelector("#search-input");
